@@ -12,6 +12,11 @@ class Settings(BaseSettings):
     POSTGRES_DB: str
     POSTGRES_PORT: int = 5432
     
+    # Agent Settings
+    LLM_PROVIDER: str = "gemini"
+    GEMINI_API_KEY: Optional[str] = None
+    OPENAI_API_KEY: Optional[str] = None
+    
     @computed_field
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> str:

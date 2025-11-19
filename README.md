@@ -10,11 +10,13 @@ A minimized, modularized FastAPI project using `uv` and Docker, designed for gra
 - **Configuration**: `pydantic-settings` for environment-based config.
 - **Testing**: `pytest` with `httpx` and `pytest-cov`.
 - **Documentation**: Integrated `docs/` folder for roadmap and planning.
+- **Agentic Layer**: Built with Google ADK, supporting Gemini and OpenAI.
 
 ## Project Structure
 ```
 fastapi-uv-project/
 ├── app/
+│   ├── agent/           # Agentic Layer (Core, Tools, Prompts)
 │   ├── api/v1/          # API Routers
 │   ├── core/            # Configuration
 │   ├── db/              # Database session & base models
@@ -22,7 +24,7 @@ fastapi-uv-project/
 │   ├── schemas/         # Pydantic schemas
 │   └── main.py          # Entry point
 ├── docs/
-│   ├── planning/        # Design documents
+│   ├── tickets/         # Ticket-based specifications
 │   └── ROADMAP.md       # Project status
 ├── migrations/          # Alembic migrations
 ├── tests/               # Tests
@@ -65,9 +67,13 @@ fastapi-uv-project/
    ```bash
    uv run python -m pytest --cov=app tests/
    ```
+   To run E2E tests (requires API keys):
+   ```bash
+   RUN_E2E=true uv run python -m pytest tests/integration/
+   ```
 
 ## Development Workflow
-- **Planning**: Check `docs/ROADMAP.md` for status and `docs/planning/` for design docs.
+- **Planning**: Check `docs/ROADMAP.md` for status and `docs/tickets/` for detailed specs.
 - **Database Changes**: Modify models in `app/models/`, then run:
   ```bash
   uv run alembic revision --autogenerate -m "Description of change"

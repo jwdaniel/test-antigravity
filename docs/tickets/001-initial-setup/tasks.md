@@ -1,4 +1,4 @@
-# Project Roadmap
+# Task Checklist - Initial Setup
 
 - [x] Project Setup
     - [x] Create project directory `fastapi-uv-project`
@@ -7,11 +7,6 @@
 - [x] Docker Setup
     - [x] Create `docker-compose.yml` for PostgreSQL 16
     - [x] Create `.env` file
-- [x] Infrastructure
-    - [x] Set up Alembic for migrations
-    - [x] Configure `migrations/env.py`
-    - [x] Generate and apply initial migration
-    - [x] Remove auto-table creation from `main.py`
 - [x] Application Structure
     - [x] Create `app/main.py`
     - [x] Create `app/core/config.py` (Settings)
@@ -19,14 +14,6 @@
     - [x] Create `app/models/`
     - [x] Create `app/schemas/`
     - [x] Create `app/api/v1/endpoints/`
-- [x] Agentic Layer
-    - [x] Install dependencies (`google-adk`, `google-genai`, `openai`)
-    - [x] Configure Environment (`.env`, `config.py`)
-    - [x] Implement Prompt Management (`app/agent/prompts/`)
-    - [x] Implement Agent Core (`app/agent/core.py`)
-    - [x] Implement Tools (`app/agent/tools.py`)
-    - [x] Implement API Endpoint (`app/api/v1/endpoints/agent.py`)
-    - [x] Verify with Gemini and OpenAI (Database connection)
 - [x] Implementation
     - [x] Implement Health Check endpoint
     - [x] Implement a sample resource (e.g., `Items`)
@@ -38,4 +25,8 @@
 - [x] Verification
     - [x] Run tests
     - [x] Verify Docker container startup
-
+- [x] Infrastructure
+    - [x] Set up Alembic for migrations
+    - [x] Configure `migrations/env.py`
+    - [x] Generate and apply initial migration
+    - [x] Remove auto-table creation from `main.py`
