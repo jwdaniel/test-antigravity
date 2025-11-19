@@ -1,0 +1,29 @@
+# Project Roadmap
+
+- [x] Project Setup
+    - [x] Create project directory `fastapi-uv-project`
+    - [x] Initialize `uv` project
+    - [x] Configure `pyproject.toml` with dependencies
+- [x] Docker Setup
+    - [x] Create `docker-compose.yml` for PostgreSQL 16
+    - [x] Create `.env` file
+- [x] Application Structure
+    - [x] Create `app/main.py`
+    - [x] Create `app/core/config.py` (Settings)
+    - [x] Create `app/db/session.py` (Database connection)
+    - [x] Create `app/models/`
+    - [x] Create `app/schemas/`
+    - [x] Create `app/api/v1/endpoints/`
+- [x] Implementation
+    - [x] Implement Health Check endpoint
+    - [x] Implement a sample resource (e.g., `Items`)
+- [x] Testing
+    - [x] Configure `pytest` and `coverage`
+    - [x] Write tests for Health Check
+    - [x] Write tests for Sample Resource
+    - [x] Ensure 68% coverage
+- [x] Verification
+    - [x] Run tests
+    - [x] Verify Docker container startup
+- [ ] Infrastructure
+    - [ ] Set up Alembic for migrations
